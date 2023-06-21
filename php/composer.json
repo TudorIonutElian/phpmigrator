@@ -1,0 +1,17 @@
+{
+  "name": "tudorionutelian/phpmigrator",
+  "description": "A tool to migrate DB from a server to another one",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "Connectors\\Database\\": "connectors/database/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Tudor Ionut Elian",
+      "email": "ionuteliantudor@gmail.com"
+    }
+  ],
+  "require": {}
+}
