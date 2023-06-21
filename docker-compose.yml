@@ -6,19 +6,19 @@ services:
       context: ./
       dockerfile: Dockerfile
     depends_on:
-      - db
+      - mariadb
     volumes:
       - ./php:/var/www/html/
     ports:
       - 8000:80
-  db:
-    container_name: db
-    image: mysql
+  mariadb:
+    container_name: dev_db
+    image: mariadb:10.5
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: MYSQL_ROOT_PASSWORD
-      MYSQL_DATABASE: MYSQL_DATABASE
-      MYSQL_USER: MYSQL_USER
-      MYSQL_PASSWORD: MYSQL_PASSWORD
+      MARIADB_ROOT_PASSWORD: qwerty
+      MARIADB_DATABASE: wp_my_database
+      MARIADB_USER: wp
+      MARIADB_PASSWORD: qwerty
     ports:
       - '9906:3306'
